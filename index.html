@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Baros Nabide</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" style="background:#989090;color:inherit"><div class="hi"><div class="avp">B</div><h1>Baros Nabide</h1><p class="jt">ML Engineer</p><p class="tl">I design machine learning models</p><div class="hc"><a href="#projects" class="btn">View case studies</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#fdf4ff;color:inherit"><div class="c"><div class="ag"><div><h2>About</h2><p>Product designer with 5 years crafting digital experiences at agencies and SaaS companies. I am obsessed with simplicity, accessibility, and the tiny details that make an interface feel alive.</p><div class="am"><div class="ami"><strong>Location</strong>Amsterdam, NL</div><div class="ami"><strong>Email</strong><a href="mailto:hello@yourname.design">hello@yourname.design</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" ><div class="c"><h2>Toolkit</h2><div class="sg"><span class="st sp">Figma</span><span class="st sd">Prototyping</span><span class="st so">Design Systems</span><span class="st sp">User Research</span><span class="st sd">Accessibility</span><span class="st so">Motion</span><span class="st sp">Framer</span><span class="st sd">HTML/CSS</span></div></div></section>
+<section class="projects" id="projects" style="background:#fdf4ff;color:inherit"><div class="c"><h2>Case studies</h2><div class="pg"><div class="pc"><div class="pt">📱</div><div class="pb"><h3>Mobile Banking App</h3><p>End-to-end UX redesign. Reduced onboarding drop-off by 52% and increased NPS by 30.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">📊</div><div class="pb"><h3>SaaS Dashboard</h3><p>Designed a data-dense dashboard that is still approachable for non-technical users.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">🎨</div><div class="pb"><h3>Design System</h3><p>Built a component library adopted by a 25-person engineering team across 3 products.</p><div class="pl"> </div></div></div></div></div></section>
+<section class="contact" id="contact" ><div class="c"><h2>Work together</h2><p class="sub">Available for freelance and full-time. Especially interested in product-led companies.</p><div class="cl"><a href="mailto:hello@yourname.design">✉ Email</a><a href="https://linkedin.com" target="_blank">in LinkedIn</a><a href="https://twitter.com" target="_blank">𝕏 Twitter</a></div></div></section>
+<footer ><p>2025 Your Name</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
