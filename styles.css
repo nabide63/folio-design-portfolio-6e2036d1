@@ -58,3 +58,21 @@ footer{padding:36px 24px;text-align:center;border-top:1px solid #eee;font-size:1
 }
 .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:140;}
 .nav-overlay.open{display:block}
+
+body{background:#0a0f1e;min-height:100vh;font-family:'Courier New',monospace!important;}
+*{font-family:'Courier New',monospace!important;}
+body,h1,h2,h3,p,.jt,.tl,.ami,.pb p{color:#7c3aed!important;}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.15),rgba(0,0,0,0.15) 1px,transparent 1px,transparent 3px);pointer-events:none;z-index:9999;}
+h1{text-shadow:0 0 8px #7c3aed,2px 2px 0 rgba(124,58,237,0.3);animation:glitch 4s infinite;}
+@keyframes glitch{0%,96%,100%{text-shadow:0 0 8px #7c3aed;}97%{text-shadow:-2px 0 #f00,2px 0 #0ff;}98%{text-shadow:2px 0 #f00,-2px 0 #0ff;}}
+h2::before{content:'> ';}
+.btn{background:transparent;border:1px solid #7c3aed;color:#7c3aed!important;text-transform:uppercase;letter-spacing:.08em;font-size:12px!important;}
+.btn::before{content:'[';margin-right:4px;}.btn::after{content:']';margin-left:4px;}
+.btn:hover{background:#7c3aed!important;color:#000!important;box-shadow:0 0 20px #7c3aed!important;}
+.about,.skills,.projects,.contact{background:rgba(0,10,3,0.8)!important;border-top:1px solid #7c3aed44;border-bottom:1px solid #7c3aed44;}
+.pc{background:rgba(0,20,5,0.9)!important;border:1px solid #7c3aed66!important;}
+.pc:hover{box-shadow:0 0 20px #7c3aed44!important;border-color:#7c3aed!important;}
+.st{background:transparent!important;border:1px solid #7c3aed66!important;color:#7c3aed!important;}
+nav{background:rgba(0,5,2,0.95)!important;border-bottom:1px solid #7c3aed44!important;}
+.logo::before{content:'./'}
+footer{background:#000305!important;border-top:1px solid #7c3aed33!important;}
